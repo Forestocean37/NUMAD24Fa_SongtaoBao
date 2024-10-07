@@ -1,5 +1,6 @@
 package com.example.numad24fa_songtaobao;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -31,5 +32,13 @@ public class MainActivity extends AppCompatActivity {
             // Display a Toast with your name and email
             Toast.makeText(MainActivity.this, "Name: Songtao Bao\nEmail: bao.so@northeastern.edu", Toast.LENGTH_LONG).show();
         });
+
+        Button quickCalcButton = findViewById(R.id.quickCalcButton);
+        quickCalcButton.setOnClickListener(v -> {
+            // Launch the Quick Calc Activity
+            Intent intent = new Intent(MainActivity.this, QuickCalcActivity.class);
+            startActivity(intent);
+        });
+
     }
 }
