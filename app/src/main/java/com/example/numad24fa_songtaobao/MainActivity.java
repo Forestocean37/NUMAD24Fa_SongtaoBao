@@ -28,15 +28,27 @@ public class MainActivity extends AppCompatActivity {
         Button aboutMeButton = findViewById(R.id.aboutMeButton);
 
         // Set a click listener on the button
-        aboutMeButton.setOnClickListener(v -> {
+        //aboutMeButton.setOnClickListener(v -> {
             // Display a Toast with your name and email
-            Toast.makeText(MainActivity.this, "Name: Songtao Bao\nEmail: bao.so@northeastern.edu", Toast.LENGTH_LONG).show();
+        //    Toast.makeText(MainActivity.this, "Name: Songtao Bao\nEmail: bao.so@northeastern.edu", Toast.LENGTH_LONG).show();
+        //});
+
+        aboutMeButton.setOnClickListener(v -> {
+            // Launch the About Me Activity
+            Intent intent = new Intent(MainActivity.this, AboutMeActivity.class);
+            startActivity(intent);
         });
 
         Button quickCalcButton = findViewById(R.id.quickCalcButton);
         quickCalcButton.setOnClickListener(v -> {
             // Launch the Quick Calc Activity
             Intent intent = new Intent(MainActivity.this, QuickCalcActivity.class);
+            startActivity(intent);
+        });
+
+        Button contactsCollectorButton = findViewById(R.id.contactsCollectorButton);
+        contactsCollectorButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ContactsCollectorActivity.class);
             startActivity(intent);
         });
 
